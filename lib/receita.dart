@@ -1,0 +1,47 @@
+import 'package:flutter/material.dart';
+
+class Receita {
+  String label;
+  String imageUrl;
+  int servings;
+  List<Ingredient> ingredients;
+
+  Receita(this.label, this.imageUrl, this.servings, this.ingredients);
+  static List<Receita> samples = [
+    Receita(
+        "Spaghetti and Meatballs", "assets/2126711929_ef763de2b3_w.jpg", 4, [
+      Ingredient(1, "Box", "Spaghetti"),
+      Ingredient(4, " ", "Frozen Meatballs"),
+      Ingredient(0.5, "jar", "sauce")
+    ]),
+    Receita("Tomato Soup", 'assets/27729023535_a57606c1be.jpg', 2,
+        [Ingredient(1, "can", "Tomato soup")]),
+    Receita("Grilled Cheese", "assets/3187380632_5056654a19_b.jpg", 1,
+        [Ingredient(2, "Slices", "Cheese"), Ingredient(2, "Slices", "Bread")]),
+    Receita(
+        "Chocolate Chip Cookies", "assets/15992102771_b92f4cc00a_b.jpg", 24, [
+      Ingredient(4, "cups", "flour"),
+      Ingredient(2, "cups", "sugar"),
+      Ingredient(0.5, "cups", "chocolate chips")
+    ]),
+    Receita("Taco Salad", "assets/8533381643_a31a99e8a6_c.jpg", 1, [
+      Ingredient(4, "oz", "Nachos"),
+      Ingredient(3, "oz", "taco meat"),
+      Ingredient(0.5, "cup", "cheese"),
+      Ingredient(0.25, "cup", "Chopped tomatoes")
+    ]),
+    Receita("Hawaiian Pizza", "assets/15452035777_294cefced5_c.jpg", 4, [
+      Ingredient(1, "item", "Pizza"),
+      Ingredient(1, "cup", "pineapple"),
+      Ingredient(8, "oz", "ham")
+    ]),
+  ];
+}
+
+class Ingredient {
+  double quantity;
+  String measure;
+  String name;
+
+  Ingredient(this.quantity, this.measure, this.name);
+}
